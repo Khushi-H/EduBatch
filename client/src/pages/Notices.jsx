@@ -46,7 +46,7 @@ export default function Notices() {
   if (loading) return <Loader />;
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+    <div className="max-w-3xl px-4 sm:px-6 py-8 space-y-6">
       <div>
         <h1 className="font-display text-2xl text-ink-800">Notices</h1>
         <p className="text-sm text-ink-400 mt-0.5">

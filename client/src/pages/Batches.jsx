@@ -143,7 +143,7 @@ export default function Batches() {
   if (loading) return <Loader />;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-6xl px-4 sm:px-6 py-8">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
         <div>
           <h1 className="font-display text-2xl text-ink-800">

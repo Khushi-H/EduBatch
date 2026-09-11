@@ -26,7 +26,7 @@ export default function TeacherDashboard() {
   if (loading) return <Loader />;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-6xl px-4 sm:px-6 py-8">
       <div className="relative overflow-hidden rounded-2xl bg-ink-900 text-white px-6 py-8 sm:px-8 sm:py-10 mb-8">
         <div
           className="absolute inset-0 pattern-dots opacity-30"

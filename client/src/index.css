@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-parchment text-ink-800 font-sans antialiased;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Fraunces', ui-serif, Georgia, serif;
+}
+
+/* IMPORTANT: custom component classes live inside @layer components so that
+   Tailwind's utility classes (e.g. pl-9 on an input with an icon) always win
+   in the cascade, regardless of where they appear in the source file. */
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-ink-800 text-white hover:bg-ink-700 shadow-soft;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-ink-700 border border-ink-100 hover:border-ink-400/40 hover:bg-ink-50;
+  }
+  .btn-danger {
+    @apply btn bg-red-50 text-red-600 border border-red-100 hover:bg-red-100;
+  }
+  .btn-amber {
+    @apply btn bg-amber-400 text-ink-900 hover:bg-amber-500 shadow-soft;
+  }
+
+  /* Cards & surfaces */
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-ink-100/60 p-5;
+  }
+  .card-hover {
+    @apply card transition hover:shadow-soft hover:-translate-y-0.5;
+  }
+
+  /* A row-style item inside a list of cards (students, notices, payments...) */
+  .list-row {
+    @apply flex items-center justify-between gap-3 rounded-xl px-3 py-3 transition hover:bg-ink-50;
+  }
+
+  /* Small circular avatar with initials */
+  .avatar {
+    @apply h-9 w-9 shrink-0 rounded-full bg-ink-800 text-white flex items-center justify-center text-xs font-semibold;
+  }
+
+  /* Form controls */
+  .input {
+    @apply w-full rounded-lg border border-ink-100 bg-white px-3.5 py-2.5 text-sm text-ink-800 placeholder:text-ink-400/60 transition focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink-600 mb-1.5;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
+
+/* Subtle dotted background used behind the auth hero panel */
+.pattern-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 22px 22px;
+}

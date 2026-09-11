@@ -71,7 +71,7 @@ export default function Profile() {
   }
 
   return (
-    <div className="max-w-2xl px-4 sm:px-6 py-8 space-y-6">
+    <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 space-y-6">
       <div className="flex items-center gap-4">
         <div className="h-16 w-16 rounded-2xl bg-ink-800 text-white flex items-center justify-center text-xl font-semibold shrink-0">
           {initials(user.name)}

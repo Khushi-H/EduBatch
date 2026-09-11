@@ -74,7 +74,7 @@ export default function ManageStaff() {
   if (loading) return <Loader />;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-4xl px-4 sm:px-6 py-8">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
         <div>
           <h1 className="font-display text-2xl text-ink-800">Manage Staff</h1>
